@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:meal_recommendation/core/utils/app_router.dart';
 
-import 'features/splash/splash_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +20,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Meal Recommendation', home: SplashView());
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+
+      title: 'Meal Recommendation',
+      routerConfig: AppRouter.router,
+    );
   }
 }
